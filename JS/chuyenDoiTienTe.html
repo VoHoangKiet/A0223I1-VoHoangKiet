@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<form action="#" method="post">
+    <table>
+        <tr>
+            <td>
+                <label><b>Amount</b></label><br>
+            </td>
+            <td>
+                <label>From Currency</label>
+            </td>
+            <td>
+                <label>To Currency</label>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="text" id="cost">
+            </td>
+            <td>
+                <select id="x1">
+                    <option value="VN">VietNam</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="x2">
+                    <option value="VN">VietNam</option>
+                    <option value="USD">USD</option>
+                </select>
+            </td>
+            <td>
+                <button type="button" onclick="change()">Change Money</button>
+            </td>
+            <td>
+                <div id="result"></div>
+            </td>
+        </tr>
+    </table>
+    <script>
+        function change() {
+            let cost = document.getElementById("cost").value;
+            let b = document.getElementById("x1").value;
+            let c = document.getElementById("x2").value;
+            let result;
+            if(b === "VN" && c === "VN") {
+                result = cost;
+            }
+            else
+                if(b === "VN" && c === "USD") {
+                    result = cost/23000;
+                }
+                else
+                    if(b === "USD" && c === "VN") {
+                        result = cost* 23000;
+                    }
+                    else
+                        result = cost;
+            document.getElementById("result").innerHTML = "" + result;
+        }
+    </script>
+</form>
+</body>
+</html>
