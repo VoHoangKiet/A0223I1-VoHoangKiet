@@ -1,41 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Form cơ bản</title>
+  <meta charset="UTF-8">
+  <title>Chuyển đổi tiền tệ</title>
 </head>
 <body>
-<style>
-  .wufoo {
-    font-family: "Lucida Grande","Lucida Sans Unicode", Tahoma, sans-serif;
-  }
-</style>
-<form method="get" action="simpleform.html" class = "wufoo">  <h2>Order Form</h2>
-  <p><b>What would you like to buy?</b></p>
-  <select>
-    <option value = "  ">A</option>
-    <option>B (+  0.5$)</option>
-    <option>C (+  0.5$)</option>
-  </select>
-  <br>
-    <p><b>How many would you like to order?</b></p>
-    <input type="radio" name="rd"/> 1 - $10 <br/>
-    <input type="radio" name="rd"/> 2 - $20 <br/>
-    <input type="radio" name="rd"/> 3 - $25 <br/>
-    <p><b>Name</b> <span style="color: red">*</span> </p>
-    <input type = "text" name="firstname" placeholder="FirstName" size="15"/>
-    <input type = "text" name="lastname" placeholder="LastName" size="15"/>
-    <p><b>Email</b></p>
-    <input type = "text" name="email" size="35"/>
-    <p><b>Phone Number</b></p>
-    <input type = "text" name="phone1" size="5"/> -
-    <input type = "text" name="phone2" size="5"/> -
-    <input type = "text" name="phone3" size="5"/>
-    <p><input type = "button" name="btSubmit" value="Submit"/></p>
-
-
-
+<form action="#" method="post">
+  <table>
+    <tr>
+      <td>
+        <label><b>Amount</b></label><br>
+      </td>
+      <td>
+        <label>From Currency</label>
+      </td>
+      <td>
+        <label>To Currency</label>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <input type="text" id="cost">
+      </td>
+      <td>
+        <select id="x1">
+          <option value="VN">VietNam</option>
+          <option value="USD">USD</option>
+        </select>
+      </td>
+      <td>
+        <select id="x2">
+          <option value="VN">VietNam</option>
+          <option value="USD">USD</option>
+        </select>
+      </td>
+      <td>
+        <button onclick="change()">Change Money</button>
+      </td>
+      <td>
+        <div id="result"></div>
+      </td>
+    </tr>
+  </table>
+  <script>
+    function change() {
+      let cost = document.getElementById("cost").value;
+      let b = document.getElementById("x1").value;
+      let c = document.getElementById("x2").value;
+      let result;
+      if(b === "VN" && c === "VN") {
+        result = cost;
+      }
+      else
+      if(b === "VN" && c === "USD") {
+        result = cost/23000;
+      }
+      else
+      if(b === "USD" && c === "VN") {
+        result = cost* 23000;
+      }
+      else
+        result = cost;
+      document.getElementById("result").innerHTML = "" + result;
+    }
+  </script>
 </form>
-
 </body>
 </html>
