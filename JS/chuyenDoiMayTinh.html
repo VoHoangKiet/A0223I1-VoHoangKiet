@@ -14,8 +14,8 @@
       <tr>
         <td><button style="width: 100%" type="button" value="+" class="ope" onclick="ope='+'">ADD(+)</button></td>
         <td><button style="width: 100%" type="button" value="-" class="ope" onclick="ope='-'">SUB(-)</button></td>
-        <td><button style="width: 100%" type="button" value="*" class="ope">MULTI(x)</button></td>
-        <td><button style="width: 100%" type="button" value="/" class="ope">DIV(/)</button></td>
+        <td><button style="width: 100%" type="button" value="*" class="ope" onclick="ope='*'">MULTI(x)</button></td>
+        <td><button style="width: 100%" type="button" value="/" class="ope" onclick="ope='/'">DIV(/)</button></td>
       </tr>
       <tr>
         <td colspan="4"><button type="button" onclick="cal()" style="width: 100%; height: 100%">RUN</button></td>
@@ -27,8 +27,6 @@
   </form>
 <script>
     let ope;
-
-
   function cal(num1, num2) {
     let a = parseInt(document.getElementById("num1").value);
     let b = parseInt(document.getElementById("num2").value);
