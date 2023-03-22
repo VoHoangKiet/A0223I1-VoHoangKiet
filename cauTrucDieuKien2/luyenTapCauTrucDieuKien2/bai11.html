@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính thuế thu nhập cá nhân</title>
+</head>
+<body>
+<script>
+  let tn = +prompt("Nhập thu nhập của bạn");
+  if(tn<0)
+    alert("Lỗi Nhập !");
+  else if(tn <= 5000000)
+    alert("Thuế thu nhập của bạn là: "+(tn*0.05) + "₫");
+  else if(tn<=10000000)
+    alert("Thuế thu nhập của bạn là: "+(tn*0.1 - 250000)+ "₫");
+  else if(tn <=18000000)
+    alert("Thuế thu nhập của bạn là: "+(tn*0.15 - 750000)+ "₫");
+  else if(tn <=32000000)
+    alert("Thuế thu nhập của bạn là: "+(tn*0.2 - 1650000)+ "₫");
+  else if(tn<=52000000)
+    alert("Thuế thu nhập của bạn là: "+(tn*0.25 - 3250000)+ "₫");
+  else if(tn<=80000000)
+    alert("Thuế thu nhập của bạn là: "+(tn*0.3 - 5850000)+ "₫");
+  else
+    alert("Thuế thu nhập của bạn là: "+(tn*0.35 - 9850000)+ "₫");
+</script>
+</body>
+</html>
