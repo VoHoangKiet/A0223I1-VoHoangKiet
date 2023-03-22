@@ -2,24 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Chỉ Số Cân Nặng Cơ Thể</title>
 </head>
 <body>
 <script>
-    let weight = prompt("Nhập cân nặng của bạn: ");
-    let height = prompt("Nhập chiều cao của bạn: ");
+    let weight = prompt("Please input your weight! ");
+    let height = prompt("Please input your height! ");
     let bmi = +weight / (height^2);
     bmi = bmi.toFixed(2);
     if(bmi<18.5) {
-        alert("Your bmi is "+bmi+", you are underweight");
+        alert("Your bmi is "+bmi+", you are Underweight");
     }
     else
         if(bmi<25) {
-            alert("Your bmi is "+bmi+", you are normal");
+            alert("Your bmi is "+bmi+", you are Normal");
         }
         else
             if(bmi < 30) {
-                alert("Your bmi is "+bmi+", you are overweight");
+                alert("Your bmi is "+bmi+", you are Overweight");
             }
             else {
                 alert("Your bmi is "+bmi+", you are Obese");
