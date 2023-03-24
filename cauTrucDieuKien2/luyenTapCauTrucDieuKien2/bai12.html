@@ -6,14 +6,17 @@
 </head>
 <body>
 <script>
-  let tien = +prompt("Nhập số tiền vay ngân hàng: ");
-  let month = +prompt("Nhập số tháng vay");
-  let laisuat = +prompt("Nhập tỉ số lãi suất vay mỗi tháng(%): ");
-  let tienlai = 0 ;
-  for(i = 0;i < month ;i++) {
-    tienlai = tienlai + (tien+tienlai)*(laisuat/100);
-  }
-  alert("Số tiền lãi bạn phải trả là: "+tienlai+"₫");
+    let tien = +prompt("Nhập số tiền vay ngân hàng: ");
+    let month = +prompt("Nhập số tháng vay");
+    let laisuat = +prompt("Nhập tỉ số lãi suất vay mỗi tháng(%): ");
+    let tienlai = 0;
+    for (i = 0; i < month; i++) {
+        tienlai = tienlai + (tien + tienlai) * (laisuat / 100);
+    }
+    alert("Số tiền lãi bạn phải trả là: " + tienlai + "₫");
+    var x = [1, 2, 4];
+    console.log(x);
+
 </script>
 </body>
 </html>
