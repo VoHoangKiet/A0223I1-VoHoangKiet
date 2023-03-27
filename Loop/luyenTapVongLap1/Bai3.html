@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    let f = new Array();
+    f[0] = 1;
+    f[1] = 1;
+    document.write(f[0] + " " + f[1] + " ");
+    for (let i = 2; i < 21; i++) {
+        f[i] = f[i - 2] + f[i - 1];
+        document.write(f[i] + " ");
+    }
+</script>
+</body>
+</html>

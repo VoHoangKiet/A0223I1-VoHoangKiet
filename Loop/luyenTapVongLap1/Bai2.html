@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    let temper;
+    do {
+        temper = +prompt("Input temperature: ");
+        if (temper > 100)
+            alert("Please decrease temperature !");
+        else if (temper < 20)
+            alert("Please increase temperature !");
+    } while (temper > 100 || temper < 20);
+</script>
+</body>
+</html>

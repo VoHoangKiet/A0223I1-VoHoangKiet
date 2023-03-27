@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hiển Thị Các Số Nguyên Tố Đầu Tiên</title>
+</head>
+<body>
+<script>
+    function isPrime(N) {
+        if (N < 1)
+            return false;
+        for (let i = 2; i <= Math.sqrt(N); i++)
+            if (N % i === 0) {
+                return false;
+            }
+        return true;
+    }
+
+    let numbers = +prompt("Input numbers of Prime u need to display: ");
+    let cnt = 0, N = 2;
+    while (cnt < numbers) {
+        if (isPrime(N)) {
+            document.write(N + " ");
+            cnt++;
+        }
+        N++;
+    }
+</script>
+</body>
+</html>
