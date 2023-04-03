@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<button type="button" onclick="random()">Chơi</button>
+<script>
+    let a;
+
+    function random() {
+        a = +prompt("Nhap vao");
+        let b = Math.floor(Math.random() * 10);
+        if (a === b) {
+            alert("Chuc Mung!");
+        } else if (a > b) {
+            alert("Lon hon");
+        } else {
+            alert("be hon");
+        }
+    }
+</script>
+</body>
+</html>
