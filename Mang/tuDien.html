@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ Điển</title>
+</head>
+<body>
+<form action="#" method="post">
+    <input type="text" id="lang">
+    <select id="option">
+        <option value="1">VN to US</option>
+        <option value="2">US to VN</option>
+    </select>
+    <button type="button" onclick="change()" style="width: 40px; height: 20px">dịch</button>
+</form>
+</body>
+<script>
+    let vn = ["cá", "bò", "gà", "chim", "chuột"];
+    let eng = ["fish", "cow", "chicken", "bird", "mouse"];
+
+    function change() {
+        let opts = document.getElementById('option').value;
+        if (opts == 1) {
+            let find = document.getElementById('lang').value;
+            let a;
+            for (let i = 0; i < vn.length; i++) {
+                if (vn[i] == find) {
+                    a = i;
+                }
+            }
+            document.write(eng[a]);
+        } else {
+            let find = document.getElementById('lang').value;
+            let a;
+            for (let i = 0; i < eng.length; i++) {
+                if (eng[i] == find) {
+                    a = i;
+                }
+            }
+            document.write(vn[a]);
+        }
+    }
+</script>
+</html>
