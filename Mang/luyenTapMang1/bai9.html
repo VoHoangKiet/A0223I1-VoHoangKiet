@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 9</title>
+</head>
+<body>
+<script>
+  let arra = [];
+  for (let i = 0; i < 10; i++) {
+    arra[i] = +prompt("Nhap phan tu thu " + i + " cua mang a ");
+  }
+  let arrb = [];
+  for (let i = 0; i < 10; i++) {
+    arrb[i] = +prompt("Nhap phan tu thu " + i + " cua mang b ");
+  }
+  let arrc = [];
+  for(let i=0;i<10;i++) {
+    arrc.push(arra[i]);
+    arrc.push(arrb[i]);
+  }
+  for(let i=0;i<arrc.length;i++) {
+    alert(arrc[i]);
+  }
+</script>
+</body>
+</html>
