@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 2</title>
+</head>
+<body>
+<script>
+    let arr = [1, 12, 14, 51, 12, 1, 2, 10, 6, -12];
+    let max = arr[0], cnt;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] >= max) {
+            max = arr[i];
+            cnt = i;
+        }
+    }
+    document.write("Gia tri lon nhat la: " + max+"<br>");
+    document.write("Vi tri cua phan tu la: "+cnt);
+</script>
+</body>
+</html>

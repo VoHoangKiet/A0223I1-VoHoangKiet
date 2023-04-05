@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 7</title>
+</head>
+<body>
+<script>
+    let arr = [], cnt = 0;
+    for (let i = 0; i < 10; i++) {
+        arr[i] = +prompt("Nhap phan tu thu " + i + ": ");
+    }
+    let V = +prompt("Nhap vao so nguyen V: ");
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === V) {
+            cnt = i + 1;
+            for (cnt; cnt < arr.length; cnt++) {
+                arr[cnt - 1] = arr[cnt];
+            }
+            arr[arr.length-1] = 0;
+        }
+    }
+    for (let i = 0; i < arr.length; i++) {
+        alert(arr[i]);
+    }
+</script>
+</body>
+</html>
