@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<script>
+    let star = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    let constellation = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function findConstella() {
+        let a = prompt("Input your star: ");
+        for (let i = 0; i < star.length; i++) {
+            if (star[i] === a) {
+                alert("constellation is: " + constellation[i]);
+            } else {
+                alert("WE CAN'T FIND YOUR STAR");
+                break;
+            }
+        }
+    }
+
+    findConstella();
+</script>
+</body>
+</html>
