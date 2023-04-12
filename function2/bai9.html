@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 9</title>
+</head>
+<body>
+<script>
+    let arr = prompt("nhap vao 1 mang ki tu: ").split("");
+    let char = prompt("Nhap vao 1 ki tu bat ki: ");
+
+    function checkChar(arr, char) {
+        let cnt = 0;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i] === char) {
+                cnt++;
+            }
+        }
+        if (cnt === 0) {
+            return -1;
+        } else {
+            return cnt;
+        }
+    }
+
+    alert(checkChar(arr, char));
+</script>
+</body>
+</html>

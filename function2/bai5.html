@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 5</title>
+</head>
+<body>
+<script>
+    function minNum(a, b, c) {
+        let min = a;
+        if (b <= a && b <= c) {
+            min = b;
+        } else if (c <= b && c <= a) {
+            min = c;
+        }
+        return min;
+    }
+
+    let a = +prompt("Input first num: ");
+    let b = +prompt("Input second num: ");
+    let c = +prompt("Input third num: ");
+    alert("Min of 3 numbers is " + minNum(a, b, c));
+</script>
+</body>
+</html>

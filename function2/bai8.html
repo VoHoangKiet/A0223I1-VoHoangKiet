@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 8</title>
+</head>
+<body>
+<script>
+    let a = [];
+    let n = +prompt("nhap so luong phan tu trong mang: ");
+    for (let i = 0; i < n; i++) {
+        a[i] = prompt("Nhap phan tu thu " + i);
+    }
+
+    function reverseArr(a) {
+        a.reverse();
+    }
+
+    reverseArr(a);
+    alert(a);
+</script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+<script>
+    function factorial(num) {
+        if (num === 2)
+            return 2;
+        else
+            return factorial(num - 1) * num;
+    }
+
+    let a = +prompt("Nhap vao so nguyen bat ky: ");
+    alert("giai thua cua so nay la: " + factorial(a));
+</script>
+</body>
+</html>
