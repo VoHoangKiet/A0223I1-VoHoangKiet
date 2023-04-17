@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu chuyện của Adam và Eva</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor(weight) {
+            this.weight = weight;
+        }
+
+        decrease() {
+            this.weight -= 1;
+        }
+
+        isEmpty() {
+            if (this.weight === 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        getWeight() {
+            console.log(this.weight);
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name = name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+
+        isMale() {
+            if (this.gender === true) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        setGender(boolean) {
+            this.gender = boolean;
+        }
+
+        checkApple(Apple) {
+            console.log(this.name + " đo được cân nặng của quả táo là: " + Apple.weight);
+        }
+
+        eatApple(Apple) {
+            if (Apple.weight > 0) {
+                console.log(this.name + " đã cắn 1 miếng táo!");
+                this.weight += 1;
+                Apple.decrease();
+            } else {
+                console.log(this.name + " không ăn táo !");
+            }
+        }
+
+        say(text) {
+            console.log(text);
+        }
+
+        getName() {
+            console.log("Tên tôi là: " + this.name);
+        }
+
+        setName(String) {
+            this.name = String;
+        }
+
+        getWeight() {
+            console.log("Cân nặng của " + this.name + " là: " + this.weight);
+        }
+
+        setWeight(int) {
+            this.weight = int;
+        }
+    }
+
+    let apple = new Apple(10);
+    let Adam = new Human();
+    let Eva = new Human();
+    Adam.setName("adam");
+    Adam.setGender(true);
+    Adam.setWeight(70);
+    Eva.setName("Eva");
+    Eva.setGender(false);
+    Eva.setWeight(50);
+    Adam.getName();
+    console.log("Adam là nam ? " + Adam.isMale());
+    Adam.say("Anh yêu em, Eva <3");
+    Eva.getName();
+    Eva.getWeight();
+    Eva.eatApple(apple);
+    Eva.checkApple(apple);
+    Eva.getWeight();
+</script>
+</body>
+</html>
