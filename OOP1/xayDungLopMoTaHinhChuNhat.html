@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây Dựng Lớp Mô Tả Hình Chữ Nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
+    Your browser does not support the HTML5 canvas tag.
+</canvas>
+<script>
+    class Rectangle {
+        constructor(length, width) {
+            this.length = length;
+            this.width = width;
+        }
+
+
+        setLength(length) {
+            this.length = length;
+        }
+
+        setWidth(width) {
+            this.width = width;
+        }
+
+        getArea() {
+            return this.length * this.width;
+        }
+
+        getPerimeter() {
+            return (this.length + this.width) * 2;
+        }
+
+        showImage(length, width) {
+            const canvas = document.getElementById("myCanvas");
+            const context = canvas.getContext("2d");
+            context.beginPath();
+            context.rect(50, 50, length * 10, width * 10);
+            context.fillStyle = "#FF0000"; // red color
+            context.fill();
+            context.closePath();
+        }
+    }
+
+    let rectangle = new Rectangle();
+    let a = +prompt("Set length for rectangle: ");
+    let b = +prompt("Set Width for rectangle: ");
+    rectangle.setLength(a)
+    rectangle.setWidth(b);
+    rectangle.showImage(a, b);
+    document.write("<br> Diện tích hình chữ nhật là: " + rectangle.getArea());
+    document.write("<br> Chu vi hình chữ nhật là:" + rectangle.getPerimeter());
+</script>
+</body>
+</html>

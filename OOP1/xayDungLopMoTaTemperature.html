@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(temper) {
+            this.temper = temper;
+        }
+
+        setTemper(temperN) {
+            this.temper = temperN;
+            this.checkTemp(temperN);
+        }
+
+        checkTemp(temp) {
+            if (temp < -273) {
+                alert("wrong temper");
+            }
+        }
+
+        changeToF() {
+            return 1.8 * this.temper + 32;
+        }
+
+        changeToK() {
+            return this.temper + 273.15;
+        }
+    }
+
+    temperature = new Temperature();
+    temperature.setTemper(25);
+    document.write("Nhiệt độ hiện tại: " + temperature.temper);
+    document.write("<br> đổi nhiệt độ sang độ F: " + temperature.changeToF());
+    document.write("<br> đổi nhiệt độ sang độ K: " + temperature.changeToK());
+
+</script>
+</body>
+</html>
